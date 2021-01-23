@@ -9,9 +9,9 @@ import BaseGame from './BaseGame';
 
 /**
  * FELADAT!
- * A feladat két lépésbő áll:
+ * A feladat két lépésből áll:
  * 1. Pótold a hiányzó tulajdonságokat a BaseGame osztályban az IBaseGame
- * interfész alpján.
+ * interfész alapján.
  * 2. A BaseGame osztályban található leírások alapján pótold ebben a Game 
  * osztályban a hiányzó metódusokat. Úgy találod meg őket, hogy abstract 
  * metódusként vannak definiálva.
