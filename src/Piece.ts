@@ -53,16 +53,38 @@ interface IPiece {
  * Pótold a hiányzó tulajdonságokat és metódusokat az interfész alapján.
  */
 export default class Piece implements IPiece {
+
+  next: Piece;
+  prev: Piece;
   x: number;
   y: number;
   type: string;
   direction: string;
-  next: Piece | null;
-  prev: Piece | null;
   el: HTMLDivElement;
   garden: HTMLDivElement;
 
-  
+  setType(type:string) {
+    this.type = type;
+    this.applyClass();
+  }
+
+  applyClass() {
+    this.el.className ='';
+    this.el.classList.add('cell' , this.type, this.direction);
+  }
+
+  isCollidingWith(node: Piece) {
+    if (node !== null) {
+      return false
+    } 
+    else {
+      if (this.x !== node.x && this.y !== node.y){
+      return true 
+    } else {
+      return false
+    }
+  }
+}
   
   constructor({
     x,
